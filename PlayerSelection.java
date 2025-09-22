@@ -22,7 +22,7 @@ public class PlayerSelection {
 
 
     final double PoundConverter = 0.45359237;
-    final double HeightConverter = 100;
+    final int HeightConverter = 100;
 
 
     // The following lines of code fetch key input from the user to aid with registration like name, height, age and others.
@@ -49,14 +49,6 @@ public class PlayerSelection {
         System.out.println("Weight: " + WeightInKg + " kgs");
 
 
-        System.out.println("Increment \n");
-        System.out.println("Current age: " + age);
-        age++; // Increased age
-        System.out.println("Age after season: " + age);
-        System.out.println("Current jersey number: " + JerseyNumber);
-        JerseyNumber--; // Penalty 
-        System.out.println("Jersey number after penalty: " + JerseyNumber);
-
         System.out.println("Eligibility Check \n");
 
         boolean isEligible = (age >= 18) && (age <= 35) && (WeightInKg < 90);
@@ -82,7 +74,7 @@ public class PlayerSelection {
         }
          System.out.println("Player Category: " + category);
 
-         System.out.println("\n  Position Assignment ");
+         System.out.println(" Position Assignment ");
          String position;
          switch (JerseyNumber) {
             case 1:
@@ -114,18 +106,18 @@ public class PlayerSelection {
 
 
 
-        System.out.println("\n Task 7A: Unwanted Fall-through ");
-        System.out.println("This shows what happens without proper breaks:");
+        System.out.println("\n  Unwanted Fall-through ");
+        System.out.println(" without proper breaks:");
         switch (JerseyNumber) {
             case 2:
                 System.out.println("Defender");
-                // Missing break - will fall through
+                
             case 6:
                 System.out.println("Midfielder");
-                // Missing break - will fall through
+                
             case 7:
                 System.out.println("Winger");
-                break;
+                
             case 9:
                 System.out.println("Striker");
                 break;
@@ -133,7 +125,7 @@ public class PlayerSelection {
                 System.out.println("Unknown position");
         }
         
-        // Task 7B: Grouped cases (useful fall-through)
+        // useful fall-through
         System.out.println("\n Grouped Cases ");
         switch (JerseyNumber) {
             case 2:
